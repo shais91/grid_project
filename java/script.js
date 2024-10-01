@@ -18,11 +18,11 @@ changeGridSelection.addEventListener("submit", function (event) {
     footer.style.position = "fixed";
   } else if (GRIDSIZE === "32x32") {
     container.style.width = "88%";
-    gridNumber = 1024;
+    gridNumber = 1023;
     changeDivFunc(gridNumber);
     footer.style.position = "relative";
   } else {
-    gridNumber = 256;
+    gridNumber = 255;
     container.style.width = "45%";
     changeDivFunc(gridNumber);
     footer.style.position = "relative";
@@ -46,5 +46,5 @@ let changeDivFunc = function (num) {
   }
 };
 document.addEventListener("DOMContentLoaded", function () {
-  changeDivFunc(256);
+  changeDivFunc(255);
 });
