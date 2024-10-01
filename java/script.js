@@ -1,5 +1,6 @@
 let container = document.querySelector("#container");
 let firstDiv = document.createElement("div");
+let footer = document.querySelector(".footer");
 firstDiv.setAttribute("class", "squareDiv");
 container.append(firstDiv);
 
@@ -11,13 +12,21 @@ changeGridSelection.addEventListener("submit", function (event) {
   let gridNumber;
   const GRIDSIZE = document.getElementById("gridSize").value;
   if (GRIDSIZE === "8x8") {
+    container.style.width = "45%";
     gridNumber = 128;
     changeDivFunc(gridNumber);
+    footer.style.position = "fixed";
   } else if (GRIDSIZE === "32x32") {
-    gridNumber = 512;
+    container.style.width = "88%";
+    gridNumber = 1024;
     changeDivFunc(gridNumber);
-  } else gridNumber = 256;
-  changeDivFunc(gridNumber);
+    footer.style.position = "relative";
+  } else {
+    gridNumber = 256;
+    container.style.width = "45%";
+    changeDivFunc(gridNumber);
+    footer.style.position = "relative";
+  }
 
   console.log(`grid size : ${GRIDSIZE}, Grid internal number : ${gridNumber}`);
   return;
@@ -37,5 +46,5 @@ let changeDivFunc = function (num) {
   }
 };
 document.addEventListener("DOMContentLoaded", function () {
-  changeDivFunc(128);
+  changeDivFunc(256);
 });

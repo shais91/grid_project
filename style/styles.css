@@ -20,6 +20,10 @@ body {
   padding: 0;
   width: 45%;
   height: auto;
+  /* flex: 1 0 420; */
+  /* width: auto;
+  height: auto;
+  flex: auto; */
   flex-wrap: wrap;
   position: relative;
   display: flex;
@@ -87,12 +91,12 @@ input[type="submit"]:hover {
 /* Footer styles */
 
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: cornflowerblue;
-  opacity: 0.4;
+  /* opacity: 0.4; */
 }
 
 #footerDiv {
