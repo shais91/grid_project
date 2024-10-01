@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./java/script.js" defer></script>
+    <link rel="stylesheet" href="./style/styles.css" />
+    <title>Etch-A-Sketch</title>
+  </head>
+  <body>
+    <h1>Etch-A-Sketch</h1>
+    <!-- <button id="gridButton">Change Grid Size</button> -->
+    <form id="gridChangeForm">
+      <label for="grid">Change Grid Size</label>
+      <select name="gridSize" id="gridSize">
+        <option value="16x16">16 x 16</option>
+        <option value="8x8">8 x 8</option>
+        <option value="32x32">32 x 32</option>
+      </select>
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="container" class="containerClass"></div>
+    <footer class="footer">
+      <div id="footerDiv">
+        <p class="contact-footer" id="nameTag">Copyright &copy; ST Design</p>
+        <button
+          class="contact-footer"
+          onclick="document.location='https://wa.link/vzkqh2/'"
+        >
+          Contact Whatsapp
+        </button>
+        <button
+          class="contact-footer"
+          onclick="document.location='mailto:muhammadshais1991@gmail.com'"
+        >
+          Contact Email
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
