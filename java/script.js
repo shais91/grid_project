@@ -47,6 +47,7 @@ let changeDivFunc = function (num) {
     grid.addEventListener("mouseover", function () {
       if (isErasorEnabled) {
         this.style.backgroundColor = "#F0F0F0";
+        this.style.opacity = "1";
       } else if (isColorChangingEnabled) {
         this.style.opacity = "0.4";
         this.style.backgroundColor = RANDOMCOLORGEN();
