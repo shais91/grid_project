@@ -98,6 +98,7 @@ input[type="submit"]:active {
 /* Color the grid button  */
 #colorfulGrid {
   display: inline;
+  width: 240px;
   font-size: 20px;
   padding: 10px 5px;
   background-color: lightgoldenrodyellow;
