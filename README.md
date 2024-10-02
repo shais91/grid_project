@@ -1,0 +1,1 @@
+Welcome to the Etch A Sketch project! This is a fun web-based drawing tool inspired by the classic Etch A Sketch toy. You can draw by hovering and darken by clicking over the canvas, and reset the canvas whenever you want to start fresh.
