@@ -3,7 +3,9 @@ let firstDiv = document.createElement("div");
 let footer = document.querySelector(".footer");
 let changeColourButton = document.getElementById("colorfulGrid");
 let isColorChangingEnabled = false;
+let isErasorEnabled = false;
 let resetGrid = document.querySelector("#resetGrid");
+let eraserButton = document.querySelector("#eraser");
 // Change Grid Size using html form element
 
 let changeGridSelection = document.getElementById("gridChangeForm");
@@ -43,7 +45,9 @@ let changeDivFunc = function (num) {
     grid = document.createElement("div");
     grid.setAttribute("class", "squareDiv");
     grid.addEventListener("mouseover", function () {
-      if (isColorChangingEnabled) {
+      if (isErasorEnabled) {
+        this.style.backgroundColor = "#F0F0F0";
+      } else if (isColorChangingEnabled) {
         this.style.opacity = "0.4";
         this.style.backgroundColor = RANDOMCOLORGEN();
       } else {
@@ -73,6 +77,12 @@ changeColourButton.addEventListener("click", function () {
     : "Start Changing Colors"; // Change button text
 });
 
+eraserButton.addEventListener("click", function () {
+  isErasorEnabled = !isErasorEnabled;
+  eraserButton.textContent = isErasorEnabled
+    ? "Eraser Active"
+    : "Eraser Inactive";
+});
 //loading default page grid
 console.log(RANDOMCOLORGEN());
 document.addEventListener("DOMContentLoaded", function () {

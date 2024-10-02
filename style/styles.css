@@ -101,7 +101,7 @@ input[type="submit"]:active {
   font-size: 20px;
   padding: 10px 5px;
   background-color: lightgoldenrodyellow;
-  color: darkblue;
+  color: blue;
   cursor: pointer;
   border-radius: 6px;
 }
@@ -123,6 +123,7 @@ input[type="submit"]:active {
   background-color: lightgoldenrodyellow;
   width: 240px;
   border-radius: 6px;
+  cursor: pointer;
 }
 #resetGrid:hover {
   background-color: lightgreen;
@@ -132,6 +133,23 @@ input[type="submit"]:active {
   transform: scale(0.9);
 }
 
+/* Eraser */
+#eraser {
+  font-size: 20px;
+  padding: 4px;
+  color: blue;
+  background-color: lightgoldenrodyellow;
+  width: 240px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#eraser:hover {
+  background-color: lightgreen;
+}
+#eraser:active {
+  background-color: red;
+  transform: scale(0.9);
+}
 /* Footer styles */
 
 .footer {
