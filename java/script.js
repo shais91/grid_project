@@ -1,9 +1,9 @@
 let container = document.querySelector("#container");
 let firstDiv = document.createElement("div");
 let footer = document.querySelector(".footer");
-firstDiv.setAttribute("class", "squareDiv");
-container.append(firstDiv);
-
+let changeColourButton = document.getElementById("colorfulGrid");
+let isColorChangingEnabled = false;
+let resetGrid = document.querySelector("#resetGrid");
 // Change Grid Size using html form element
 
 let changeGridSelection = document.getElementById("gridChangeForm");
@@ -42,9 +42,43 @@ let changeDivFunc = function (num) {
   for (let i = 0, grid; i < num; i++) {
     grid = document.createElement("div");
     grid.setAttribute("class", "squareDiv");
+    grid.addEventListener("mouseover", function () {
+      if (isColorChangingEnabled) {
+        this.style.opacity = "0.4";
+        this.style.backgroundColor = RANDOMCOLORGEN();
+      } else {
+        this.style.opacity = "0.7";
+        this.style.backgroundColor = "black";
+      }
+    });
+    grid.addEventListener("click", function () {
+      this.style.opacity = "1";
+    });
     container.append(grid);
   }
 };
+
+//random color generator function
+
+const RANDOMCOLORGEN = function () {
+  let x = Math.floor(Math.random() * 16777215).toString(16);
+  final = "#" + x;
+  return final;
+};
+
+changeColourButton.addEventListener("click", function () {
+  isColorChangingEnabled = !isColorChangingEnabled; // Toggle the color changing state
+  changeColourButton.textContent = isColorChangingEnabled
+    ? "Stop Changing Colors"
+    : "Start Changing Colors"; // Change button text
+});
+
+console.log(RANDOMCOLORGEN());
 document.addEventListener("DOMContentLoaded", function () {
   changeDivFunc(256);
+});
+resetGrid.addEventListener("click", function () {
+  for (let i = 0; i < container.children.length; i++) {
+    container.children[i].style.backgroundColor = "#f0f0f0";
+  }
 });
