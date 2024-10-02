@@ -73,9 +73,11 @@ changeColourButton.addEventListener("click", function () {
     : "Start Changing Colors"; // Change button text
 });
 
+//loading default page grid
 console.log(RANDOMCOLORGEN());
 document.addEventListener("DOMContentLoaded", function () {
-  changeDivFunc(256);
+  changeDivFunc(128);
+  footer.style.position = "fixed";
 });
 resetGrid.addEventListener("click", function () {
   for (let i = 0; i < container.children.length; i++) {

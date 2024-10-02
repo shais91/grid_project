@@ -44,22 +44,21 @@ body {
   cursor: cell;
 }
 
-#colorfulGrid {
-  display: inline;
-  font-size: 20px;
-  padding: 10px 5px;
-  background-color: lightgoldenrodyellow;
-  color: darkblue;
-  cursor: pointer;
-  border-radius: 6px;
-}
 label {
   font-size: 25px;
   font-weight: bold;
   color: #333;
   margin-right: 20px;
 }
+/* Button to select grid size */
 
+#gridButton {
+  font-size: 20px;
+  width: 240px;
+  color: blue;
+  background-color: lightgoldenrodyellow;
+  margin-bottom: 20px;
+}
 #gridSize {
   font-size: 20px;
   padding: 4px;
@@ -71,14 +70,7 @@ label {
 #gridSize:hover {
   background-color: lightgreen;
 }
-#resetGrid {
-  font-size: 20px;
-  padding: 4px;
-  color: darkblue;
-  background-color: lightgoldenrodyellow;
-  width: 200px;
-  border-radius: 6px;
-}
+
 #gridSize option {
   font-size: 20px;
   padding: 5px;
@@ -97,13 +89,47 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: lightgreen; /* Hover color for submit button */
 }
-/* Button to select grid size */
 
-#gridButton {
+input[type="submit"]:active {
+  background-color: red;
+  transform: scale(0.9);
+}
+
+/* Color the grid button  */
+#colorfulGrid {
+  display: inline;
   font-size: 20px;
+  padding: 10px 5px;
+  background-color: lightgoldenrodyellow;
+  color: darkblue;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#colorfulGrid:hover {
+  background-color: lightgreen;
+}
+
+#colorfulGrid:active {
+  background-color: red;
+  transform: scale(0.9);
+}
+
+/* Reset grid button  */
+#resetGrid {
+  font-size: 20px;
+  padding: 4px;
   color: blue;
-  background-color: antiquewhite;
-  margin-bottom: 20px;
+  background-color: lightgoldenrodyellow;
+  width: 240px;
+  border-radius: 6px;
+}
+#resetGrid:hover {
+  background-color: lightgreen;
+}
+#resetGrid:active {
+  background-color: red;
+  transform: scale(0.9);
 }
 
 /* Footer styles */
